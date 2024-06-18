@@ -3,7 +3,7 @@ import { playlistStore } from "../models/playlist-store.js";
 export const dashboardController = {
   async index(request, response) {
     const viewData = {
-      title: "Playlist Dashboard",
+      title: "Weather Dashboard",
       playlists: await playlistStore.getAllPlaylists(),
     };
     console.log("dashboard rendering");
@@ -14,7 +14,7 @@ async addPlaylist(request, response) {
   const newPlaylist = {
     title: request.body.title,
   };
-  console.log(`adding playlist ${newPlaylist.title}`);
+  console.log(`adding weatther station ${newPlaylist.title}`);
   await playlistStore.addPlaylist(newPlaylist);
   response.redirect("/dashboard");
 },
