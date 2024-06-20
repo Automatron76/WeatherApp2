@@ -1,0 +1,30 @@
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Track</th>
+      <th>Artist</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each station.reports}}
+    <tr>
+      <td>
+        {{code}}
+      </td>
+      <td>
+        {{temp}}
+      </td>
+      <td>
+        {{windSpeed}}
+      </td>
+      <td>
+        {{windDirection}}
+      </td>
+      <td>
+        {{pressure}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

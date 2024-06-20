@@ -2,31 +2,22 @@
   "file": "./models/reports.json",
   "reports": [
     {
-      "code": null,
-      "temp": 5,
-      "windSpeed": null,
-      "windDirection": null,
-      "pressure": 4,
-      "_id": "6d093b38-2bf1-4ff5-9206-c06c3a47888b",
+      "code": 200,
+      "temp": 7,
+      "windSpeed": 10,
+      "windDirection": 8,
+      "pressure": 7,
+      "_id": "8c7f930a-eed2-4e43-9be8-f08589ad304c",
       "stationId": "3717f35b-39be-49b2-9fd1-90aea924895a"
     },
     {
-      "code": null,
-      "temp": 8,
-      "windSpeed": null,
-      "windDirection": null,
-      "pressure": 8,
-      "_id": "4ea83d89-f680-46c1-bfdf-639721bf6761",
-      "stationId": "3717f35b-39be-49b2-9fd1-90aea924895a"
-    },
-    {
-      "code": null,
-      "temp": 3,
-      "windSpeed": null,
-      "windDirection": null,
-      "pressure": 3,
-      "_id": "d9ea1558-51fd-4326-9545-f0733809fc1d",
-      "stationId": "50a2ad87-4ade-48d0-8d67-002370cade7c"
+      "code": 200,
+      "temp": 2,
+      "windSpeed": 3.5,
+      "windDirection": 0,
+      "pressure": 0,
+      "_id": "78b9bd88-457c-4eb0-ab14-bb805e55eeae",
+      "stationId": "37d383e8-282c-4619-bab6-97b8cceb2ba4"
     }
   ]
 }

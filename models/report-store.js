@@ -40,7 +40,7 @@ export const reportStore = {
     await db.write();
   },
 
-  async updateReport(track, updatedReport) {
+  async updateReport(report, updatedReport) {
     report.code = updatedReport.code;
     report.temp = updatedReport.temp;
     report.pressure = updatedReport.pressure;
