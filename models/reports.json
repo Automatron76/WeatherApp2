@@ -18,6 +18,15 @@
       "pressure": 0,
       "_id": "78b9bd88-457c-4eb0-ab14-bb805e55eeae",
       "stationId": "37d383e8-282c-4619-bab6-97b8cceb2ba4"
+    },
+    {
+      "code": 605,
+      "temp": 8,
+      "windSpeed": 7,
+      "windDirection": 1,
+      "pressure": 0,
+      "_id": "29168273-9c90-4bec-9b34-5c9cc83a6a5a",
+      "stationId": "37d383e8-282c-4619-bab6-97b8cceb2ba4"
     }
   ]
 }
