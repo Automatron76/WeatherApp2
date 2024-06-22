@@ -22,7 +22,7 @@ async addStation(request, response) {
 
 async deleteStation(request,response) {
   const stationId = request.params.id;
-  console.log("Deleting Station ${stationId}");
+  console.log(`Deleting Station ${stationId}`);
   await stationStore.deleteStationById(stationId);
   response.redirect("/dashboard");
 },
