@@ -1,3 +1,4 @@
+import { reportStore } from "../models/report-store.js";
 import { stationStore } from "../models/station-store.js";
 
 export const dashboardController = {
@@ -18,4 +19,14 @@ async addStation(request, response) {
   await stationStore.addStation(newStation);
   response.redirect("/dashboard");
 },
+
+async deleteStation(request,response) {
+  const stationId = request.params.id;
+  console.log("Deleting Station ${stationId}");
+  await stationStore.deleteStationById(stationId);
+  response.redirect("/dashboard");
+},
+
+
+
 };
