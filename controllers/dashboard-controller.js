@@ -9,6 +9,7 @@ export const dashboardController = {
     const viewData = {
       title: "Station Dashboard",
       station: await stationStore.getStationsByUserId(loggedInUser._id),
+      stations: await stationStore.getAllStations(),
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
