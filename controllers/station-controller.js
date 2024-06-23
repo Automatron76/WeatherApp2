@@ -26,10 +26,10 @@ export const stationController = {
   },
 
   async deleteReport(request, response) {
-    const stationId = request.params.stationId;
-    const reportId = request.params.reportId;
+    const stationId = request.params.stationid;
+    const reportId = request.params.reportid;
     console.log(`Deleting Report ${reportId} from Station ${stationId}`);
     await reportStore.deleteReport(request.params.reportId);
-    response.redirect("/station/" + stationId)
+    response.redirect("/station/" + stationId);
   }
 };

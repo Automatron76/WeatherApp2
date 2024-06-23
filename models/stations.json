@@ -2,8 +2,24 @@
   "file": "./models/stations.json",
   "stations": [
     {
-      "title": "STATION 1",
-      "_id": "37d383e8-282c-4619-bab6-97b8cceb2ba4"
+      "title": "TEST1",
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "b34a5834-24a1-44c7-86e2-815cf04b55c0"
+    },
+    {
+      "title": "STATION 2",
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "d557f28f-a9a8-462b-bd32-aa823d6f7167"
+    },
+    {
+      "title": "station 3",
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "787c8bf2-cd0e-49be-8e73-5bd010cdccd3"
+    },
+    {
+      "title": "TEST7",
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "f21c3fa3-2e55-4c93-aa3a-0788b26c0d06"
     }
   ]
 }
