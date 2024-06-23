@@ -1,4 +1,15 @@
-<table class="table is-fullwidth">
+<label>Report Box Summay</label>
+<section class="box">
+    <div class="columns ">
+  <div class="column has-background-black ">First column</div>
+  <div class="column has-background-black ">Second column</div>
+  <div class="column has-background-black ">Third column</div>
+  <div class="column has-background-black ">Fourth column</div>
+  <div class="column has-background-black ">Fifth column</div>
+  <div class="column has-background-black ">Sixth column</div>
+</div>
+</section>
+<table class="table is-fullwidth is-hoverable">
   <thead>
     <tr>
       <th>Weather Code</th>
@@ -6,6 +17,9 @@
       <th>Wind Speed</th>
       <th>Wind Direction</th>
       <th>Pressure</th>
+      <th>
+      <th></th>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -30,6 +44,7 @@
       <a href="/station/{{../station._id}}/deletereport/{{_id}}" class="button">
          {{>icons/delete}}
       </a>
+      </td>
       <td>
       <a href="/station/{{../station._id}}/editreport/{{_id}}" class="button">
          {{>icons/edit}}

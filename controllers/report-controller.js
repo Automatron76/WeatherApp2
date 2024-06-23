@@ -2,12 +2,13 @@ import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 
 export const reportController = {
+
   async index(request, response) {
     const stationId = request.params.stationid;
-    const trackId = request.params.reportid;
+    const reportId = request.params.reportid;
     console.log(`Editing Report ${reportId} from Station ${stationId}`);
     const viewData = {
-      title: "Edit Data",
+      code: "",
       station: await stationStore.getStationById(stationId),
       report: await reportStore.getReportById(reportId),
     };

@@ -18,6 +18,15 @@
       "pressure": 5,
       "_id": "b902c712-e495-4340-8e06-8c3a657cb6f1",
       "stationid": "92871a1f-e3c7-4ffa-a670-2727498212d9"
+    },
+    {
+      "code": 999,
+      "temp": 999,
+      "windSpeed": 999,
+      "windDirection": 999,
+      "pressure": 999,
+      "_id": "3d0f8637-e352-4e47-8861-679b983e2ac5",
+      "stationid": "dd772f37-cd80-4ab1-81a1-f14c274c3852"
     }
   ]
 }

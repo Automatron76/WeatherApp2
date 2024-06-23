@@ -1,7 +1,19 @@
 <form class ="section box"action="/dashboard/addstation" method="POST">
-  <div class="field">
-    <label class="label"> Weather Station name</label>
-    <input class="input" type="text" placeholder="Enter weather station name" name="title">
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <label class="label has-text-weight-semibold is-size-5">Station Name</label>
+        <input class="input" type="text" placeholder="Enter Weather Station name" name="Name">
+      </div>
+      <div class="field">
+        <label class="label has-text-weight-semibold is-size-5">Station Latitude:</label>
+        <input class="input" type="number" placeholder="Enter Latitude" name="Lat" step=".01">
+      </div>
+      <div class="field">
+        <label class="label has-text-weight-semibold is-size-5">Station Longitude:</label>
+        <input class="input" type="number" placeholder="Enter Longitude" name="Long" step=".01">
+      </div>
+    </div>
   </div>
   <button class="button is-link">
    Add Weather Station 

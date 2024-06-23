@@ -1,23 +1,23 @@
-{{> menu}}
+
 
 <form class="box" action="/station/{{station._id}}/updatereport/{{report._id}}" method="POST">
   <label>Report Details:</label>
   <div class="field is-horizontal">
     <div class="field-body">
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Code" name="code" value="{{report.code}}">
+        <input class="input" type="number" placeholder="Enter Code" name="code" value="{{report.code}}">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Temperature" name="temp" value="{{report.temp}}">
+        <input class="input" type="number" placeholder="Enter Temperature" name="temp" value="{{report.temp}}">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Wind Speed" name="windSpeed" value="{{report.windSpeed}}">
+        <input class="input" type="number" placeholder="Enter Wind Speed" name="windSpeed" value="{{report.windSpeed}}">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Wind Direction" name="windDirection" value="{{report.windDirection}}">
+        <input class="input" type="number" placeholder="Enter Wind Direction" name="windDirection" value="{{report.windDirection}}">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Pressure" name="pressure" value="{{report.pressure}}">
+        <input class="input" type="number" placeholder="Enter Pressure" name="pressure" value="{{report.pressure}}">
       </div>
     </div>
   </div>
