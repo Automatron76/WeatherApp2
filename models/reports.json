@@ -36,6 +36,15 @@
       "pressure": 10,
       "_id": "55dbb5c5-3a78-472a-b2fb-5508882f394c",
       "stationid": "dd772f37-cd80-4ab1-81a1-f14c274c3852"
+    },
+    {
+      "code": 7,
+      "temp": 7,
+      "windSpeed": 7,
+      "windDirection": "North (N)",
+      "pressure": 7,
+      "_id": "7e6c2ac9-4074-4fe6-92e7-91418cb392dc",
+      "stationid": "dd772f37-cd80-4ab1-81a1-f14c274c3852"
     }
   ]
 }

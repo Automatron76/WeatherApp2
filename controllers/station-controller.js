@@ -70,7 +70,7 @@ console.log({
       code: Number(request.body.code),
       temp: Number(request.body.temp),
       windSpeed: Number(request.body.windSpeed),
-      windDirection: Number(request.body.windDirection),
+      windDirection: request.body.windDirection,
       pressure: Number(request.body.pressure)
     };
     console.log(`adding report ${newReport.title}`);
