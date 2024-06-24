@@ -60,6 +60,11 @@ console.log({
       title: "Station",
       station: station,
       minTemp: minTempReport.temp,
+      maxTemp: maxTempReport.temp,
+      minWindSpeed: minWindSpeedReport.windSpeed,
+      maxWindSpeed: maxWindSpeedReport.windSpeed,
+      minPressure: minPressureReport.pressure,
+      maxPressure: maxPressureReport.pressure
     };
     response.render("station-view", viewData);
   },
