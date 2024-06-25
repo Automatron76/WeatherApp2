@@ -1,5 +1,16 @@
 export const stationAnalytics = {
 
+  getfirstCode(station) {
+    if (station.reports.length > 0) {
+        // Get the first report
+        const firstReport = station.reports[0];
+        // Return the weather code from the first report
+        return firstReport.code;
+    }
+    // Return null if there are no reports
+    return null;
+},
+
   getMinTempReport(station) {
     let minTempReport = null;
     if (station.reports.length > 0) {

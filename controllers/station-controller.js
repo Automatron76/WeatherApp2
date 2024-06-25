@@ -8,6 +8,7 @@ export const stationController = {
     
     const station = await stationStore.getStationById(request.params.id);
     
+    const firstCode = stationAnalytics.getfirstCode(station);
     const minTemp = stationAnalytics.getMinTempReport(station);
     const maxTemp = stationAnalytics.getMaxTempReport(station);
 
@@ -19,6 +20,7 @@ export const stationController = {
 
     const viewData = {
       title: "Station",
+      code: firstCode,
       station: station,
       minTemp: minTemp,
       maxTemp: maxTemp,

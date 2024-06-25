@@ -1,21 +1,11 @@
 <label>Report Box Summay</label>
 <section class="box">
-    <div class="columns ">
-  <div class="column has-background-black has-text-white">Station Location</div>
-  <div class="column has-background-black has-text-white">Weather</div>
-  <div class="column has-background-black has-text-white">Temp <p>Min Temp: {{minTemp.temp}}</p><p>Max Temp: {{maxTemp.temp}}</p></div>
-  <div class="column has-background-black has-text-white">Wind <p>Min Wind Speed: {{minWindSpeed.windSpeed}}</p> <p>Max Wind Speed: {{maxWindSpeed.windSpeed}}</p></div>
-  <div class="column has-background-black has-text-white">Pressure <p>Min Pressure: {{minPressure.pressure}}</p> <p>Max Pressure: {{maxPressure.pressure}}</p></div>
- 
-
-      
-      
-      
-      
-      
-       
-
-
+<div class="columns">
+  <div class="column mr-1 has-background-black has-text-white">Station Location</div>
+  <div class="column mr-1 has-background-danger has-text-white">Weather code <p>{{code}}</p></div>
+  <div class="column mr-1 has-background-warning has-text-white">Temp <p>Min Temp: {{minTemp.temp}}</p><p>Max Temp: {{maxTemp.temp}}</p></div>
+  <div class="column mr-1 has-background-info has-text-white">Wind <p>Min Wind Speed: {{minWindSpeed.windSpeed}}</p> <p>Max Wind Speed: {{maxWindSpeed.windSpeed}}</p></div>
+  <div class="column mr-1 has-background-success has-text-white">Pressure <p>Min Pressure: {{minPressure.pressure}}</p> <p>Max Pressure: {{maxPressure.pressure}}</p></div>
 </div>
 </section>
 <table class="table is-fullwidth is-hoverable">
