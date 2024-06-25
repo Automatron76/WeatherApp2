@@ -1,5 +1,6 @@
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
+import { stationAnalytics } from "../utils/station-analytics.js";
 
 export const stationController = {
   
@@ -7,64 +8,24 @@ export const stationController = {
     
     const station = await stationStore.getStationById(request.params.id);
     
+    const minTemp = stationAnalytics.getMinTempReport(station);
+    const maxTemp = stationAnalytics.getMaxTempReport(station);
+
+    const minWindSpeed = stationAnalytics.getminWindSpeedReport(station);
+    const maxWindSpeed = stationAnalytics.getmaxWindSpeedReport(station);
     
-let minTempReport = null;
-let maxTempReport = null;
-let minWindSpeedReport = null;
-let maxWindSpeedReport = null;
-let minPressureReport = null;
-let maxPressureReport = null;
-
-if (station.reports.length > 0) {
-    minTempReport = station.reports[0];
-    maxTempReport = station.reports[0];
-    minWindSpeedReport = station.reports[0];
-    maxWindSpeedReport = station.reports[0];
-    minPressureReport = station.reports[0];
-    maxPressureReport = station.reports[0];
-
-    for (let i = 1; i < station.reports.length; i++) {
-        if (station.reports[i].temp < minTempReport.temp) {
-            minTempReport = station.reports[i];
-        }
-        if (station.reports[i].temp > maxTempReport.temp) {
-            maxTempReport = station.reports[i];
-        }
-        if (station.reports[i].windSpeed < minWindSpeedReport.windSpeed) {
-            minWindSpeedReport = station.reports[i];
-        }
-        if (station.reports[i].windSpeed > maxWindSpeedReport.windSpeed) {
-            maxWindSpeedReport = station.reports[i];
-        }
-        if (station.reports[i].pressure < minPressureReport.pressure) {
-            minPressureReport = station.reports[i];
-        }
-        if (station.reports[i].pressure > maxPressureReport.pressure) {
-            maxPressureReport = station.reports[i];
-        }
-    }
-}
-
-console.log({
-    minTemp: minTempReport.temp,
-    maxTemp: maxTempReport.temp,
-    minWindSpeed: minWindSpeedReport.windSpeed,
-    maxWindSpeed: maxWindSpeedReport.windSpeed,
-    minPressure: minPressureReport.pressure,
-    maxPressure: maxPressureReport.pressure
-});
-
- 
+    const minPressure = stationAnalytics.getminPressureReport(station);
+    const maxPressure = stationAnalytics.getmaxPressureReport(station);
 
     const viewData = {
       title: "Station",
       station: station,
-      minTemp: minTempReport.temp,
-      maxTemp: maxTempReport.temp,
-      minWindSpeed: minWindSpeedReport.windSpeed,
-      maxWindSpeed: maxWindSpeedReport.windSpeed,
-      minPressure: minPressureReport.pressure,
-      maxPressure: maxPressureReport.pressure
+      minTemp: minTemp,
+      maxTemp: maxTemp,
+      minWindSpeed: minWindSpeed,
+      maxWindSpeed: maxWindSpeed,
+      minPressure: minPressure,
+      maxPressure: maxPressure
     };
     response.render("station-view", viewData);
   },
