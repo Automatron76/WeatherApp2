@@ -1,6 +1,7 @@
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import { stationAnalytics } from "../utils/station-analytics.js";
+import dayjs from "dayjs";  // Import dayjs
 
 export const stationController = {
   
@@ -27,7 +28,10 @@ export const stationController = {
       minWindSpeed: minWindSpeed,
       maxWindSpeed: maxWindSpeed,
       minPressure: minPressure,
-      maxPressure: maxPressure
+      maxPressure: maxPressure,
+      stationName: station.title,
+      stationLatitude: station.latitude,
+      stationLongitude: station.longitude,
     };
     response.render("station-view", viewData);
   },
@@ -39,7 +43,8 @@ export const stationController = {
       temp: Number(request.body.temp),
       windSpeed: Number(request.body.windSpeed),
       windDirection: request.body.windDirection,
-      pressure: Number(request.body.pressure)
+      pressure: Number(request.body.pressure),
+      dateTime: dayjs().format("YYYY-MM-DD HH:mm:ss")  // Add the current date and time
     };
     console.log(`adding report ${newReport.title}`);
     await reportStore.addReport(station._id, newReport);
@@ -52,5 +57,7 @@ export const stationController = {
     console.log(`Deleting Report ${reportId} from Station ${stationId}`);
     await reportStore.deleteReport(request.params.reportId);
     response.redirect("/station/" + stationId);
-  }
+  },
+
+  
 };

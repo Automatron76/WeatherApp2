@@ -2,14 +2,11 @@
   "file": "./models/stations.json",
   "stations": [
     {
-      "title": "STATION TEST",
+      "title": "test1",
+      "latitude": "1",
+      "longitude": "1",
       "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
-      "_id": "92871a1f-e3c7-4ffa-a670-2727498212d9"
-    },
-    {
-      "title": "Station 2",
-      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
-      "_id": "dd772f37-cd80-4ab1-81a1-f14c274c3852"
+      "_id": "dde5efa4-40b7-4186-8ef1-a08ac38e59ed"
     }
   ]
 }

@@ -1,50 +1,16 @@
 {
   "file": "./models/reports.json",
   "reports": [
+    
     {
-      "code": 700,
-      "temp": 7,
-      "windSpeed": 7,
-      "windDirection": 7,
-      "pressure": 7,
-      "_id": "af060e6e-48c0-4db2-beda-1791007df0ed",
-      "stationid": "92871a1f-e3c7-4ffa-a670-2727498212d9"
-    },
-    {
-      "code": 500,
+      "code": 5,
       "temp": 5,
       "windSpeed": 5,
-      "windDirection": 5,
-      "pressure": 5,
-      "_id": "b902c712-e495-4340-8e06-8c3a657cb6f1",
-      "stationid": "92871a1f-e3c7-4ffa-a670-2727498212d9"
-    },
-    {
-      "code": 999,
-      "temp": 999,
-      "windSpeed": 999,
-      "windDirection": 999,
-      "pressure": 999,
-      "_id": "3d0f8637-e352-4e47-8861-679b983e2ac5",
-      "stationid": "dd772f37-cd80-4ab1-81a1-f14c274c3852"
-    },
-    {
-      "code": 500,
-      "temp": 15,
-      "windSpeed": 18,
-      "windDirection": 5,
-      "pressure": 10,
-      "_id": "55dbb5c5-3a78-472a-b2fb-5508882f394c",
-      "stationid": "dd772f37-cd80-4ab1-81a1-f14c274c3852"
-    },
-    {
-      "code": 7,
-      "temp": 7,
-      "windSpeed": 7,
       "windDirection": "North (N)",
-      "pressure": 7,
-      "_id": "7e6c2ac9-4074-4fe6-92e7-91418cb392dc",
-      "stationid": "dd772f37-cd80-4ab1-81a1-f14c274c3852"
+      "pressure": 5,
+      "dateTime": "2024-06-26 06:57:33",
+      "_id": "bcd32206-18ef-4195-8445-86f7725ea803",
+      "stationid": "dde5efa4-40b7-4186-8ef1-a08ac38e59ed"
     }
   ]
 }
