@@ -20,6 +20,7 @@ router.post("/authenticate", accountsController.authenticate);
 router.get("/dashboard", dashboardController.index);
 router.post("/dashboard/addstation", dashboardController.addStation);
 router.get("/dashboard/deletestation/:id", dashboardController.deleteStation);
+router.get("/edit",dashboardController.index)
 
 router.get("/station/:id", stationController.index);
 router.post("/station/:id/addreport", stationController.addReport);

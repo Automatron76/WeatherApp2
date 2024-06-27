@@ -20,10 +20,14 @@ export const stationController = {
     const minPressure = stationAnalytics.getminPressureReport(station);
     const maxPressure = stationAnalytics.getmaxPressureReport(station);
 
+    const{ description, icon }  = weatherUtils.getWeatherDescription(firstCode);
+
     const viewData = {
       title: "Station",
       code: firstCode,
       station: station,
+      weatherIcon: icon,
+      description: description,
       minTemp: minTemp,
       maxTemp: maxTemp,
       minWindSpeed: minWindSpeed,

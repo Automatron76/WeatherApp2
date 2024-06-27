@@ -1,7 +1,6 @@
 {
   "file": "./models/reports.json",
   "reports": [
-    
     {
       "code": 5,
       "temp": 5,
@@ -10,6 +9,16 @@
       "pressure": 5,
       "dateTime": "2024-06-26 06:57:33",
       "_id": "bcd32206-18ef-4195-8445-86f7725ea803",
+      "stationid": "dde5efa4-40b7-4186-8ef1-a08ac38e59ed"
+    },
+    {
+      "code": 500,
+      "temp": 7,
+      "windSpeed": 3,
+      "windDirection": "Southwest (SW)",
+      "pressure": 16,
+      "dateTime": "2024-06-27 07:11:45",
+      "_id": "bb8c71a8-f93a-4630-b84f-c0217f023dbd",
       "stationid": "dde5efa4-40b7-4186-8ef1-a08ac38e59ed"
     }
   ]
