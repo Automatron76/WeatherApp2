@@ -12,6 +12,10 @@ export const dashboardController = {
       station: await stationStore.getStationsByUserId(loggedInUser._id),
       stations: await stationStore.getAllStations(),
     };
+
+      // Sort stations alphabetically by title
+      stations = stations.sort((a, b) => a.title.localeCompare(b.title));
+
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
   },
