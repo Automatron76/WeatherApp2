@@ -49,4 +49,14 @@ export const accountsController = {
     const userEmail = request.cookies.station;
     return await userStore.getUserByEmail(userEmail);
   },
+
+  async editUser(request, response) {
+    const loggedInUser = await accountsController.getLoggedInUser(request);
+    const viewData = {
+      title: "Edit User",
+      user: await userStore.getUserById(loggedInUser._id),
+    };
+    console.log("edit user rendering");
+    response.render("edit-user", viewData);
+  },
 };

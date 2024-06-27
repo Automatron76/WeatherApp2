@@ -1,7 +1,8 @@
 
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
-import { userStore } from "../models/user-store.js";
+
+
 export const dashboardController = {
 
   async index(request, response) {
@@ -35,21 +36,20 @@ async deleteStation(request,response) {
 },
 
 async editUser(request, response) {
-  const userid =request.params._id;
+  const userid = request.params._id;
 
-  const updatedReport = {
+  const updatedUser = {
     firstName: request.body.firstName,
     lastName: request.body.lastName,
     email: request.body.email,
     password: request.body.password,
-    pressure: Number(request.body.pressure) 
-    };
+  };
 
     console.log(`Updating User ${userid}`);
     const update = await reportStore.getUserById(reportId);
-  };
+    await getAllUsers.updateUser(update,updatedUser );
+    response.redirect("/dashboard/" )
+  
+  }
 }
 
-
-
-};

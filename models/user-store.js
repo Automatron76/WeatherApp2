@@ -40,12 +40,13 @@ export const userStore = {
   },
 
   async updateUser(userid, updatedUser) {
+    await db.read();
     const user = await this.getUserById(Id);
     
-    user.name = updatedUser.firstName;
-    user.surname = updatedUser.lastName;
+    user.firstName = updatedUser.firstName;
+    user.lastName = updatedUser.lastName;
     user.email = updatedUser.email;
-    user.password = updatedReport.password;
+    user.password = updatedUser.password;
     await db.write();
   },
 };
