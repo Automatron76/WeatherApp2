@@ -1,21 +1,24 @@
 
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
+import axios from "axios";
 
+const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tramore,Ireland&appid=085fdcfb805ee6e4f4e5faf7214d6ba8;`
 
 export const dashboardController = {
 
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
+
+    let stations = await stationStore.getStationsByUserId(loggedInUser._id);
+
+    stations = stations.sort((a, b) => a.title.localeCompare(b.title));
     const viewData = {
       title: "Station Dashboard",
       station: await stationStore.getStationsByUserId(loggedInUser._id),
       stations: await stationStore.getAllStations(),
+     
     };
-
-      // Sort stations alphabetically by title
-      stations = stations.sort((a, b) => a.title.localeCompare(b.title));
-
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
   },
@@ -54,6 +57,8 @@ async editUser(request, response) {
     await getAllUsers.updateUser(update,updatedUser );
     response.redirect("/dashboard/" )
   
-  }
+  },
+
+  
 }
 
