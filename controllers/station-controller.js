@@ -11,7 +11,6 @@ export const stationController = {
     const station = await stationStore.getStationById(request.params.id); //this gets the station id
 
     const firstCode = stationAnalytics.getfirstCode(station);   //this should get the code of object at index 0
-   // const weatherDescription = weatherUtils.getWeatherDescription(station)
 
     const minTemp = stationAnalytics.getMinTempReport(station);
     const maxTemp = stationAnalytics.getMaxTempReport(station);
@@ -66,7 +65,7 @@ export const stationController = {
     const stationId = request.params.stationid;
     const reportId = request.params.reportid;
     console.log(`Deleting Report ${reportId} from Station ${stationId}`);
-    await reportStore.deleteReport(request.params.reportId);
+    await reportStore.deleteReport(reportId);
     response.redirect("/station/" + stationId);
   },
 

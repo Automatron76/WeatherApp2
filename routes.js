@@ -7,6 +7,7 @@ import { aboutController } from "./controllers/about-controller.js";
 
 
 import { reportController } from "./controllers/report-controller.js";
+import { editUserController } from "./controllers/editUser-controller.js";
 
 export const router = express.Router();
 
@@ -21,8 +22,8 @@ router.post("/authenticate", accountsController.authenticate);
 router.get("/dashboard", dashboardController.index);
 router.post("/dashboard/addstation", dashboardController.addStation);
 router.get("/dashboard/deletestation/:id", dashboardController.deleteStation);
-router.get("/edit",dashboardController.index)
-router.post("/edit", dashboardController.editUser);
+router.get("/edit", editUserController.index)
+router.post("/edit", editUserController.editUser);
 
 
 router.get("/station/:id", stationController.index);

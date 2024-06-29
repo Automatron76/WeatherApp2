@@ -47,24 +47,7 @@ async deleteStation(request,response) {
   console.log(`Deleting Station ${stationId}`);
   await stationStore.deleteStationById(stationId);
   response.redirect("/dashboard");
-},
-
-async editUser(request, response) {
-  const userid = request.params._id;
-
-  const updatedUser = {
-    firstName: request.body.firstName,
-    lastName: request.body.lastName,
-    email: request.body.email,
-    password: request.body.password,
-  };
-
-    console.log(`Updating User ${userid}`);
-    const update = await reportStore.getUserById(reportId);
-    await getAllUsers.updateUser(update,updatedUser );
-    response.redirect("/dashboard/" )
-  
-  },
+}
 
   
 }
