@@ -7,6 +7,20 @@
       "longitude": 12,
       "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
       "_id": "f0a51d36-6baa-4ccf-8c1d-ced7a560c874"
+    },
+    {
+      "title": "B",
+      "latitude": 15,
+      "longitude": -60,
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "cb0b7d63-287c-4713-9e1e-59925e3f3feb"
+    },
+    {
+      "title": "C",
+      "latitude": 60,
+      "longitude": 100,
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "0a726bd7-51cf-4c0f-8156-bc56d9fc1bc8"
     }
   ]
 }

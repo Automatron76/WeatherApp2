@@ -1,6 +1,25 @@
 {
   "file": "./models/reports.json",
   "reports": [
-    
+    {
+      "code": 500,
+      "temp": 1,
+      "windSpeed": 22,
+      "windDirection": "North (N)",
+      "pressure": 3,
+      "dateTime": "2024-06-29 08:54:36",
+      "_id": "1d3abe2f-5c3c-4569-8dbb-0891f0eb4a96",
+      "stationid": "f0a51d36-6baa-4ccf-8c1d-ced7a560c874"
+    },
+    {
+      "code": 600,
+      "temp": 5,
+      "windSpeed": 6,
+      "windDirection": "West-Southwest (WSW)",
+      "pressure": 4,
+      "dateTime": "2024-06-29 13:31:44",
+      "_id": "4d27fec3-c7a3-41c8-9272-0158522a653e",
+      "stationid": "cb0b7d63-287c-4713-9e1e-59925e3f3feb"
+    }
   ]
 }

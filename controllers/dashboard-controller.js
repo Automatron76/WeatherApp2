@@ -2,12 +2,18 @@
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 import axios from "axios";
+import { stationAnalytics } from "../utils/station-analytics.js";
 
 const weatherRequestUrl = `http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={long}&appid=55f42099079e1f2b191983b4311a383a`
 
 export const dashboardController = {
+  
+  
+  
 
   async index(request, response) {
+
+    
     const loggedInUser = await accountsController.getLoggedInUser(request);
 
     const viewData = {
@@ -16,6 +22,7 @@ export const dashboardController = {
       stations: await stationStore.getAllStations(),
      
     };
+    
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
   },

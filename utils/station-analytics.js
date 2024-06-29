@@ -2,10 +2,10 @@ export const stationAnalytics = {
 
   getfirstCode(station) {
     if (station.reports.length > 0) {
-        // Get the first report
-        const firstReport = station.reports[0];
-        // Return the weather code from the first report
-        return firstReport.code;
+        
+        const firstReport = station.reports[0]; // Get the first report object associated with the station id you are viewing.
+        
+        return firstReport.code; // Return the weather code from the first report object
     }
     // Return null if there are no reports
     return null;
@@ -95,6 +95,4 @@ export const stationAnalytics = {
     }
     return maxPressureReport;
   },
-  
-  
 };

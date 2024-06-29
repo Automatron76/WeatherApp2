@@ -8,7 +8,7 @@ export const reportController = {
     const reportId = request.params.reportid;
     console.log(`Editing Report ${reportId} from Station ${stationId}`);
     const viewData = {
-      code: "",
+      code: code,
       station: await stationStore.getStationById(stationId),
       report: await reportStore.getReportById(reportId),
     };

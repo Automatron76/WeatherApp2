@@ -8,9 +8,11 @@ export const stationController = {
   
   async index(request, response) {
     
-    const station = await stationStore.getStationById(request.params.id);
-    
-    const firstCode = stationAnalytics.getfirstCode(station);
+    const station = await stationStore.getStationById(request.params.id); //this gets the station id
+
+    const firstCode = stationAnalytics.getfirstCode(station);   //this should get the code of object at index 0
+   // const weatherDescription = weatherUtils.getWeatherDescription(station)
+
     const minTemp = stationAnalytics.getMinTempReport(station);
     const maxTemp = stationAnalytics.getMaxTempReport(station);
 
@@ -26,9 +28,11 @@ export const stationController = {
     const viewData = {
       title: "Station",
       code: firstCode,
+   
       station: station,
-      weatherIcon: icon,
+      icon: icon,
       description: description,
+
       minTemp: minTemp,
       maxTemp: maxTemp,
       windDirection: windDirection,
