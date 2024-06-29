@@ -1,3 +1,5 @@
+import { userStore } from "../models/user-store";
+
 export const editUserController = {
   index(request, response) {
     const viewData = {
@@ -19,8 +21,8 @@ export const editUserController = {
     };
   
       console.log(`Updating User ${userid}`);
-      const update = await reportStore.getUserById(reportId);
-      await getAllUsers.updateUser(update,updatedUser );
+      const update = await userStore.getUserById(userid);
+      await userStore.updateUser(update,updatedUser );
       response.redirect("/dashboard/" )
     
     }
