@@ -14,6 +14,7 @@ export const stationController = {
     const minTemp = stationAnalytics.getMinTempReport(station);
     const maxTemp = stationAnalytics.getMaxTempReport(station);
 
+    const windDirection = stationAnalytics.getWindDirection(station);
     const minWindSpeed = stationAnalytics.getminWindSpeedReport(station);
     const maxWindSpeed = stationAnalytics.getmaxWindSpeedReport(station);
     
@@ -30,6 +31,7 @@ export const stationController = {
       description: description,
       minTemp: minTemp,
       maxTemp: maxTemp,
+      windDirection: windDirection,
       minWindSpeed: minWindSpeed,
       maxWindSpeed: maxWindSpeed,
       minPressure: minPressure,

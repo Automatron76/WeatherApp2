@@ -35,5 +35,3 @@ router.post("/station/:stationid/updatereport/:reportid", reportController.updat
 router.get("/about", aboutController.index);
 
 
-
-router.post("/dashboard/addreport", dashboardController.addreport);

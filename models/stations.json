@@ -2,25 +2,11 @@
   "file": "./models/stations.json",
   "stations": [
     {
-      "title": "test1",
-      "latitude": "1",
-      "longitude": "1",
+      "title": "A",
+      "latitude": 15,
+      "longitude": 12,
       "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
-      "_id": "dde5efa4-40b7-4186-8ef1-a08ac38e59ed"
-    },
-    {
-      "title": "TEST 2",
-      "latitude": "50",
-      "longitude": "50",
-      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
-      "_id": "266de0eb-6590-4b49-9390-9baa9f07df5b"
-    },
-    {
-      "title": "a",
-      "latitude": "50",
-      "longitude": "50",
-      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
-      "_id": "957b121b-396f-4a8b-919b-3ac549453dfe"
+      "_id": "f0a51d36-6baa-4ccf-8c1d-ced7a560c874"
     }
   ]
 }

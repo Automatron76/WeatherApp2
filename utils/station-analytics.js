@@ -37,6 +37,13 @@ export const stationAnalytics = {
     return maxTempReport;
   },
 
+  getWindDirection(station) {
+    if (station.reports.length > 0) {
+      return station.reports[0].windDirection;
+    }
+    return null;  
+  },
+
   getminWindSpeedReport(station) {
     let minWindSpeedReport = null;
     if (station.reports.length > 0) {
