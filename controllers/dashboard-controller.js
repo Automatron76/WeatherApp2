@@ -3,6 +3,7 @@ import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 import axios from "axios";
 import { stationAnalytics } from "../utils/station-analytics.js";
+import { userStore } from "../models/user-store.js";  // Aggiungi questa riga
 
 const weatherRequestUrl = `http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={long}&appid=55f42099079e1f2b191983b4311a383a`
 
@@ -15,9 +16,11 @@ export const dashboardController = {
 
     
     const loggedInUser = await accountsController.getLoggedInUser(request);
+    const user = await userStore.getUserById(loggedInUser._id); // Fetch user details
 
     const viewData = {
       title: "Station Dashboard",
+      user: user, // Pass user object to the view
       station: await stationStore.getStationsByUserId(loggedInUser._id),
       stations: await stationStore.getAllStations(),
      

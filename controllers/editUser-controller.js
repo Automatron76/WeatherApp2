@@ -1,9 +1,16 @@
-import { userStore } from "../models/user-store";
+import { userStore } from "../models/user-store.js";
+import { accountsController } from './accounts-controller.js';
 
 export const editUserController = {
-  index(request, response) {
+
+
+ async index(request, response) {
+    const loggedInUser = await accountsController.getLoggedInUser(request);
+    const user = await userStore.getUserById(loggedInUser._id);
+
     const viewData = {
       title: "Edit user info",
+      user: user
     };
     
     response.render("edit-user-view", viewData);
@@ -11,8 +18,8 @@ export const editUserController = {
 
   
   async editUser(request, response) {
-    const userid = request.params._id;
-  
+    const userid = request.params.id; // Get user ID from URL parameter
+
     const updatedUser = {
       firstName: request.body.firstName,
       lastName: request.body.lastName,
@@ -21,8 +28,8 @@ export const editUserController = {
     };
   
       console.log(`Updating User ${userid}`);
-      const update = await userStore.getUserById(userid);
-      await userStore.updateUser(update,updatedUser );
+      
+      await userStore.updateUser(userid,updatedUser );
       response.redirect("/dashboard/" )
     
     }

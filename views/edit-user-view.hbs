@@ -2,20 +2,21 @@
 
 <section class="section">
   <h1 class="title">Edit User info</h1>
-  <form action="/edit" method="POST">
+  <form action="/edit/{{user._id}}" method="POST">
+   <input type="hidden" name="id" value="{{user._id}}">
     <label class="label">Name</label>
     <div class="field is-horizontal">
       <div class="field-body">
         <div class="field">
-          <input class="input" type="text" placeholder="Enter first name" name="firstName">
+          <input class="input" type="text" placeholder="Enter first name" name="firstName" value="{{user.firstName}}">
         </div>
         <div class="field">
-          <input class="input" type="text" placeholder="Enter last name" name="lastName">
+          <input class="input" type="text" placeholder="Enter last name" name="lastName" value="{{user.lastName}}">
         </div>
       </div>
     </div>
     <div class="field">
-      <label class="label">Email</label> <input class="input " type="text" placeholder="Enter email" name="email">
+      <label class="label">Email</label> <input class="input " type="text" placeholder="Enter email" name="email" value="{{user.email}}">
     </div>
     <div class="field">
       <label class="label">Password</label> <input class="input" type="password" placeholder="Enter Password" name="password">
