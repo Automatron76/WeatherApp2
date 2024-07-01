@@ -22,7 +22,7 @@ router.post("/authenticate", accountsController.authenticate);
 router.get("/dashboard", dashboardController.index);
 router.post("/dashboard/addstation", dashboardController.addStation);
 router.get("/dashboard/deletestation/:id", dashboardController.deleteStation);
-router.get("/edit/:userid", editUserController.index)
+router.get("/edit/:id", editUserController.index)
 router.post("/edit/:id", editUserController.editUser);
 
 

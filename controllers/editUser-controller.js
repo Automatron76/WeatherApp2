@@ -3,7 +3,6 @@ import { accountsController } from './accounts-controller.js';
 
 export const editUserController = {
 
-
  async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const user = await userStore.getUserById(loggedInUser._id);
@@ -18,7 +17,7 @@ export const editUserController = {
 
   
   async editUser(request, response) {
-    const userid = request.params.id; // Get user ID from URL parameter
+    const loggedInUser = await accountsController.getLoggedInUser(request) // Get user ID from URL parameter
 
     const updatedUser = {
       firstName: request.body.firstName,
@@ -27,9 +26,9 @@ export const editUserController = {
       password: request.body.password,
     };
   
-      console.log(`Updating User ${userid}`);
+      console.log(`Updating User ${loggedInUser._id}`);
       
-      await userStore.updateUser(userid,updatedUser );
+      await userStore.updateUser(loggedInUser._id,updatedUser );
       response.redirect("/dashboard/" )
     
     }
