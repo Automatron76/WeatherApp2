@@ -10,6 +10,8 @@ export const stationController = {
     
     const station = await stationStore.getStationById(request.params.id); //this gets the station id
 
+    station.reports.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)); // Sort reports by dateTime in descending order
+
     const firstCode = stationAnalytics.getfirstCode(station);   //this should get the code of object at index 0
 
     const minTemp = stationAnalytics.getMinTempReport(station);
@@ -27,7 +29,6 @@ export const stationController = {
     const viewData = {
       title: "Station",
       code: firstCode,
-   
       station: station,
       icon: icon,
       description: description,
