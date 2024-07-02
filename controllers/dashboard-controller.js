@@ -15,6 +15,8 @@ export const dashboardController = {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const user = await userStore.getUserById(loggedInUser._id); // Fetch user details
     const stations = await stationStore.getStationsByUserId(loggedInUser._id)
+    stations.sort((a, b) => a.title.localeCompare(b.title));
+
     const viewData = {
       title: "Station Dashboard",
       user: user, // Pass user object to the view

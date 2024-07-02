@@ -1,35 +1,4 @@
 {
   "file": "./models/reports.json",
-  "reports": [
-    {
-      "code": 600,
-      "temp": 5,
-      "windSpeed": 6,
-      "windDirection": "West-Southwest (WSW)",
-      "pressure": 4,
-      "dateTime": "2024-06-29 13:31:44",
-      "_id": "4d27fec3-c7a3-41c8-9272-0158522a653e",
-      "stationid": "cb0b7d63-287c-4713-9e1e-59925e3f3feb"
-    },
-    {
-      "code": 600,
-      "temp": 5,
-      "windSpeed": 18,
-      "windDirection": "South (S)",
-      "pressure": 5,
-      "dateTime": "2024-06-30 08:29:24",
-      "_id": "959cecc0-7b3d-4c0f-89eb-e359183d0bde",
-      "stationid": "f0a51d36-6baa-4ccf-8c1d-ced7a560c874"
-    },
-    {
-      "code": 400,
-      "temp": 16,
-      "windSpeed": 7,
-      "windDirection": "Southwest (SW)",
-      "pressure": 20,
-      "dateTime": "2024-06-30 08:29:39",
-      "_id": "c93f8ced-e023-4238-a3d1-576227ee2e8a",
-      "stationid": "f0a51d36-6baa-4ccf-8c1d-ced7a560c874"
-    }
-  ]
+  "reports": []
 }
