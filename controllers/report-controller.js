@@ -4,6 +4,7 @@ import { reportStore } from "../models/report-store.js";
 export const reportController = {
 
   async index(request, response) {
+    
     const stationId = request.params.stationid;
     const reportId = request.params.reportid;
     console.log(`Editing Report ${reportId} from Station ${stationId}`);

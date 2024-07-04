@@ -12,7 +12,7 @@ export const stationController = {
 
     station.reports.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)); // Sort reports by dateTime in descending order
 
-    const firstCode = stationAnalytics.getfirstCode(station);   //this should get the code of object at index 0
+    const firstCode = stationAnalytics.getfirstCode(station);   //this should get the weather code of object at index 0
 
     const minTemp = stationAnalytics.getMinTempReport(station);
     const maxTemp = stationAnalytics.getMaxTempReport(station);
@@ -26,6 +26,7 @@ export const stationController = {
 
     const{ description, icon }  = weatherUtils.getWeatherDescription(firstCode);
 
+
     const viewData = {
       title: "Station",
       code: firstCode,
@@ -35,11 +36,14 @@ export const stationController = {
 
       minTemp: minTemp,
       maxTemp: maxTemp,
+
       windDirection: windDirection,
       minWindSpeed: minWindSpeed,
       maxWindSpeed: maxWindSpeed,
+
       minPressure: minPressure,
       maxPressure: maxPressure,
+
       stationName: station.title,
       stationLatitude: station.latitude,
       stationLongitude: station.longitude,
@@ -49,6 +53,8 @@ export const stationController = {
 
   async addReport(request, response) {
     const station = await stationStore.getStationById(request.params.id);
+    
+     
     const newReport = {
       code: Number(request.body.code),
       temp: Number(request.body.temp),
@@ -57,8 +63,11 @@ export const stationController = {
       pressure: Number(request.body.pressure),
       dateTime: dayjs().format("YYYY-MM-DD HH:mm:ss")  // Add the current date and time
     };
-    console.log(`adding report ${newReport.title}`);
-    await reportStore.addReport(station._id, newReport);
+
+    const addedReport = await reportStore.addReport(station._id, newReport);
+
+    console.log(`adding report ${addedReport._id}`);
+    
     response.redirect("/station/" + station._id);
   },
 
