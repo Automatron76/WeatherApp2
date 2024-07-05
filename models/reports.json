@@ -12,16 +12,6 @@
       "stationid": "e4f9e123-3144-43b2-86d2-abd70814abde"
     },
     {
-      "code": 321,
-      "temp": 13,
-      "windSpeed": 11,
-      "windDirection": "North (N)",
-      "pressure": 8,
-      "dateTime": "2024-07-02 07:56:47",
-      "_id": "e704a712-5905-4994-a121-5b5ed7c19eee",
-      "stationid": "e4f9e123-3144-43b2-86d2-abd70814abde"
-    },
-    {
       "code": 500,
       "temp": 13,
       "windSpeed": 15,
@@ -50,16 +40,6 @@
       "dateTime": "2024-07-02 07:58:45",
       "_id": "ddb55e56-e2ed-40f3-ad87-2f5a990e7fd8",
       "stationid": "12fa3bed-a05a-4b30-96f7-3551db6b054f"
-    },
-    {
-      "code": 15,
-      "temp": 200,
-      "windSpeed": 1,
-      "windDirection": "North (N)",
-      "pressure": 1,
-      "dateTime": "2024-07-02 08:07:00",
-      "_id": "2cb18f03-3430-4b55-a836-b6e0cd1beca0",
-      "stationid": "e4f9e123-3144-43b2-86d2-abd70814abde"
     },
     {
       "code": 230,

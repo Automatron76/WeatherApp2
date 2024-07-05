@@ -20,29 +20,29 @@ export const dashboardController = {
     const stations = await stationStore.getStationsByUserId(loggedInUser._id)
     stations.sort((a, b) => a.title.localeCompare(b.title));  //sort stations in alphabetical order
 
- const report = await reportStore.getReportById(request.params.id); //this gets the report id
+    const report = await reportStore.getReportById(request.params.id); //this gets the report id
    
-    //const minTemp = stationAnalytics.getMinTempReport(report);
-    //const maxTemp = stationAnalytics.getMaxTempReport(report);
+    const minTemp = stationAnalytics.getMinTempReport(report);
+    const maxTemp = stationAnalytics.getMaxTempReport(report);
 
-    //const windDirection = stationAnalytics.getWindDirection(report);
-    //const minWindSpeed = stationAnalytics.getminWindSpeedReport(report);
-    //const maxWindSpeed = stationAnalytics.getmaxWindSpeedReport(report);
+    const windDirection = stationAnalytics.getWindDirection(report);
+    const minWindSpeed = stationAnalytics.getminWindSpeedReport(report);
+    const maxWindSpeed = stationAnalytics.getmaxWindSpeedReport(report);
     
-    //const minPressure = stationAnalytics.getminPressureReport(report);
-    //const maxPressure = stationAnalytics.getmaxPressureReport(report);
+    const minPressure = stationAnalytics.getminPressureReport(report);
+    const maxPressure = stationAnalytics.getmaxPressureReport(report);
 
     const viewData = {
       title: "Station Dashboard",
       user: user, // Pass user object to the view
       stations: stations,
-    //  minTemp: minTemp,
-      //maxTemp: maxTemp,
-      //windDirection: windDirection,
-      //minWindSpeed: minWindSpeed,
-      //maxWindSpeed: maxWindSpeed,
-      //minPressure: minPressure,
-      //maxPressure: maxPressure
+      minTemp: minTemp,
+      maxTemp: maxTemp,
+      windDirection: windDirection,
+      minWindSpeed: minWindSpeed,
+      maxWindSpeed: maxWindSpeed,
+      minPressure: minPressure,
+      maxPressure: maxPressure
      
     };
     

@@ -13,7 +13,7 @@ export const stationAnalytics = {
 
   getMinTempReport(station) {
     let minTempReport = null;
-    if (station.reports.length > 0) {
+    if (station && station.reports && station.reports.length > 0) {
       minTempReport = station.reports[0];
       for (let i = 1; i < station.reports.length; i++) {
         if (station.reports[i].temp < minTempReport.temp) {
@@ -26,7 +26,7 @@ export const stationAnalytics = {
   
   getMaxTempReport(station) {
     let maxTempReport = null;
-    if (station.reports.length > 0) {
+    if (station && station.reports && station.reports.length > 0) {
       maxTempReport = station.reports[0];
       for (let i = 1; i < station.reports.length; i++) {
         if (station.reports[i].temp > maxTempReport.temp) {
@@ -38,7 +38,7 @@ export const stationAnalytics = {
   },
 
   getWindDirection(station) {
-    if (station.reports.length > 0) {
+    if (station && station.reports && station.reports.length > 0) {
       return station.reports[0].windDirection;
     }
     return null;  
@@ -46,7 +46,7 @@ export const stationAnalytics = {
 
   getminWindSpeedReport(station) {
     let minWindSpeedReport = null;
-    if (station.reports.length > 0) {
+    if (station && station.reports && station.reports.length > 0) {
         minWindSpeedReport = station.reports[0];
       for (let i = 1; i < station.reports.length; i++) {
         if (station.reports[i].windSpeed < minWindSpeedReport.windSpeed) {
@@ -59,7 +59,7 @@ export const stationAnalytics = {
 
   getmaxWindSpeedReport(station) {
     let maxWindSpeedReport = null;
-    if (station.reports.length > 0) {
+    if (station && station.reports && station.reports.length > 0) {
         maxWindSpeedReport = station.reports[0];
       for (let i = 1; i < station.reports.length; i++) {
         if (station.reports[i].windSpeed > maxWindSpeedReport.windSpeed) {
@@ -72,7 +72,7 @@ export const stationAnalytics = {
 
   getminPressureReport(station) {
     let minPressureReport = null;
-    if (station.reports.length > 0) {
+    if (station && station.reports && station.reports.length > 0) {
         minPressureReport = station.reports[0];
       for (let i = 1; i < station.reports.length; i++) {
         if (station.reports[i].pressure < minPressureReport.pressure) {
@@ -85,7 +85,7 @@ export const stationAnalytics = {
 
   getmaxPressureReport(station) {
     let maxPressureReport = null;
-    if (station.reports.length > 0) {
+    if (station && station.reports && station.reports.length > 0) {
         maxPressureReport = station.reports[0];
       for (let i = 1; i < station.reports.length; i++) {
         if (station.reports[i].pressure > maxPressureReport.pressure) {
