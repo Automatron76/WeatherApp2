@@ -21,6 +21,13 @@
       "longitude": 16,
       "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
       "_id": "12fa3bed-a05a-4b30-96f7-3551db6b054f"
+    },
+    {
+      "title": "Zurich",
+      "latitude": 47.359,
+      "longitude": 8.635,
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "949bbb7f-09fa-48c8-94ca-989b29c2289e"
     }
   ]
 }

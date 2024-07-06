@@ -1,0 +1,25 @@
+<div id="map-{{_id}}" style="height: 420px;" class="mt-2">
+      <script>
+       var map = L.map('map-{{_id}}').setView([51.505, -0.09], 5)
+
+       // Array of stations
+    var stations = [
+      {{#each stations}}
+      {
+        "title": "{{title}}",
+        "latitude": {{latitude}},
+        "longitude": {{longitude}}
+      },
+      {{/each}}
+    ];
+
+     // Loop through stations and add markers
+    stations.forEach(function(station) {
+      L.marker([station.latitude, station.longitude]).addTo(map)
+        .bindPopup('<b>' + station.title + '</b><br>Latitude: ' + station.latitude + '<br>Longitude: ' + station.longitude);
+    });
+       L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', { maxZoom: 19,
+       attribution: '&copy; <a href="https://carto.com/">carto.com</a> contributors'}).addTo(map);
+
+      </script>;
+  </div>

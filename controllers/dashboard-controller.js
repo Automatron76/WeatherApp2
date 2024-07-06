@@ -4,10 +4,9 @@ import { accountsController } from "./accounts-controller.js";
 import { reportStore } from "../models/report-store.js";
 import { stationAnalytics } from "../utils/station-analytics.js";
 
-import axios from "axios";
+
 import { userStore } from "../models/user-store.js"; 
 
-const weatherRequestUrl = `http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={long}&appid=55f42099079e1f2b191983b4311a383a`
 
 export const dashboardController = {
 

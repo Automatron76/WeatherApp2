@@ -1,4 +1,6 @@
 <div class="box has-text-centered">
-<form action="/dashboard/addautoreport" method="GET">
-  <button class="button is-warning">Auto Generate Report</button>
-</form>
+  <form action="/dashboard/addautoreport" method="GET">
+    <input type="hidden" name="stationName" value="{{stationName}}">
+    <button class="button is-warning" type="submit">Auto Generate Report</button>
+  </form>
+</div>

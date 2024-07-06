@@ -3,11 +3,13 @@ import { reportStore } from "../models/report-store.js";
 import { stationAnalytics } from "../utils/station-analytics.js";
 import dayjs from "dayjs";  // Import dayjs
 import { weatherUtils } from "../utils/weatherUtils.js";
+import axios from "axios";
 
 export const stationController = {
   
   async index(request, response) {
-    
+    const weatherRequestUrl = `http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={long}&appid=55f42099079e1f2b191983b4311a383a`
+
     const station = await stationStore.getStationById(request.params.id); //this gets the station id
 
     station.reports.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)); // Sort reports by dateTime in descending order
