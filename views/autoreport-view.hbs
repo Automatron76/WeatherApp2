@@ -1,15 +1,14 @@
-<section id="autoreport-section" style="display: none;">
+{{> menu}}
+<section id="autoreport-view section">
   <div class="box">
-    <h3>Auto Generated Report</h3>
-    <div id="autoreport-content">
-
-      {{reading-info}}
+    <h1 class="is-size-1 has-text-centered">Auto Generated Report for {{weather.stationName}}</h1>
+    <div>
+      
+      {{> reading-info weather=weather}}
       {{reading-map}}
       {{reading-graph}}
       {{reading-forecast}}
-
-    
-      <!-- The weather data will be displayed here -->
+ 
     </div>
   </div>
 </section>

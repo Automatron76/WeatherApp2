@@ -1,10 +1,17 @@
-<section id="autoreport-section" style="display: none;">
+<section id="autoreport-view section">
   <div class="box">
-    <h3>Station Title</h3>
-    <div id="autoreport-content">
-        <div>Temp</div>
-        <div>min and max wind</div>
-        <div>min and max pressure</div>
+    <h4>{{weather.stationName}}</h4>
+    <div>
+      <p>Temperature: {{weather.temp}} °C</p>
+      <p>Feels Like: {{weather.feelsLike}} °C</p>
+      <p>Min Temperature: {{weather.tempMin}} °C</p>
+      <p>Max Temperature: {{weather.tempMax}} °C</p>
+      <p>Pressure: {{weather.pressure}} hPa</p>
+      <p>Humidity: {{weather.humidity}}%</p>
+      <p>Wind Speed: {{weather.windSpeed}} m/s</p>
+      <p>Wind Direction: {{weather.windDegree}}°</p>
+      <p>Description: {{weather.description}}</p>
+      <img src="{{weather.icon}}" alt="Weather Icon">
     </div>
   </div>
 </section>

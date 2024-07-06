@@ -28,6 +28,20 @@
       "longitude": 8.635,
       "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
       "_id": "949bbb7f-09fa-48c8-94ca-989b29c2289e"
+    },
+    {
+      "title": "London",
+      "latitude": 51.509,
+      "longitude": -0.118,
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "60ce3f0c-8676-4d50-8880-3d6b034b59a4"
+    },
+    {
+      "title": "Dublin",
+      "latitude": 53.35,
+      "longitude": -6.266,
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "e1612229-6d6e-49c3-a392-b760c648a5b3"
     }
   ]
 }

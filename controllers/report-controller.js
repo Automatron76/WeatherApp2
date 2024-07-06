@@ -31,4 +31,6 @@ export const reportController = {
     await reportStore.updateReport(report, updatedReport);
     response.redirect("/station/" + stationId);
   },
+
+  
 };
