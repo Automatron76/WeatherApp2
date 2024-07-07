@@ -2,104 +2,24 @@
   "file": "./models/reports.json",
   "reports": [
     {
+      "code": 715,
+      "temp": 15,
+      "windSpeed": 10,
+      "windDirection": "North (N)",
+      "pressure": 8,
+      "dateTime": "2024-07-07 10:17:20",
+      "_id": "5c972c4d-10b3-4439-8740-b0d7a51b7698",
+      "stationid": "e1612229-6d6e-49c3-a392-b760c648a5b3"
+    },
+    {
       "code": 800,
-      "temp": 15,
-      "windSpeed": 7,
-      "windDirection": "North (N)",
-      "pressure": 10,
-      "dateTime": "2024-07-02 07:56:35",
-      "_id": "80ddf3e1-705f-4a23-88e4-096ea1ccbac2",
-      "stationid": "e4f9e123-3144-43b2-86d2-abd70814abde"
-    },
-    {
-      "code": 500,
-      "temp": 13,
-      "windSpeed": 15,
-      "windDirection": "North (N)",
-      "pressure": 7,
-      "dateTime": "2024-07-02 07:56:56",
-      "_id": "531115d7-2f28-4f54-9308-e062659f68b2",
-      "stationid": "8c9dc257-a09f-473c-b8a8-d7c589334720"
-    },
-    {
-      "code": 420,
-      "temp": 7,
-      "windSpeed": 30,
+      "temp": 21,
+      "windSpeed": 18,
       "windDirection": "West (W)",
-      "pressure": 40,
-      "dateTime": "2024-07-02 07:57:12",
-      "_id": "e04a82a9-6268-4973-8396-5e712942e3d5",
-      "stationid": "8c9dc257-a09f-473c-b8a8-d7c589334720"
-    },
-    {
-      "code": 200,
-      "temp": 1,
-      "windSpeed": 1,
-      "windDirection": "North (N)",
-      "pressure": 1,
-      "dateTime": "2024-07-02 07:58:45",
-      "_id": "ddb55e56-e2ed-40f3-ad87-2f5a990e7fd8",
-      "stationid": "12fa3bed-a05a-4b30-96f7-3551db6b054f"
-    },
-    {
-      "code": 230,
-      "temp": 15,
-      "windSpeed": 19,
-      "windDirection": "West-Northwest (WNW)",
-      "pressure": 7,
-      "dateTime": "2024-07-03 07:12:38",
-      "_id": "03d902a8-9050-4384-8904-4b3705452443",
-      "stationid": "12fa3bed-a05a-4b30-96f7-3551db6b054f"
-    },
-    {
-      "code": 300,
-      "temp": 16,
-      "windSpeed": 54,
-      "windDirection": "West (W)",
-      "pressure": 3,
-      "dateTime": "2024-07-04 07:47:03",
-      "_id": "a83ed7fe-afae-4632-94c1-4cd8b102df29",
-      "stationid": "e4f9e123-3144-43b2-86d2-abd70814abde"
-    },
-    {
-      "code": 500,
-      "temp": 17,
-      "windSpeed": 33,
-      "windDirection": "East-Southeast (ESE)",
-      "pressure": 50,
-      "dateTime": "2024-07-04 07:55:59",
-      "_id": "ec211c67-9608-4e77-9bfd-edb40af4667d",
-      "stationid": "e4f9e123-3144-43b2-86d2-abd70814abde"
-    },
-    {
-      "code": 450,
-      "temp": 13,
-      "windSpeed": 78,
-      "windDirection": "Northwest (NW)",
-      "pressure": 40,
-      "dateTime": "2024-07-04 07:58:59",
-      "_id": "b5069ee9-51c2-4dfd-acf8-6de38e8f0bbb",
-      "stationid": "e4f9e123-3144-43b2-86d2-abd70814abde"
-    },
-    {
-      "code": 17,
-      "temp": 17,
-      "windSpeed": 17,
-      "windDirection": "North (N)",
-      "pressure": 17,
-      "dateTime": "2024-07-04 08:00:26",
-      "_id": "2b3d425c-8f30-435b-bcb8-26d892e1fdbb",
-      "stationid": "e4f9e123-3144-43b2-86d2-abd70814abde"
-    },
-    {
-      "code": 600,
-      "temp": 11,
-      "windSpeed": 12,
-      "windDirection": "South (S)",
-      "pressure": 13,
-      "dateTime": "2024-07-04 08:01:10",
-      "_id": "fcf8de4f-9f7a-41bf-b484-724de27fc4c1",
-      "stationid": "e4f9e123-3144-43b2-86d2-abd70814abde"
+      "pressure": 20,
+      "dateTime": "2024-07-07 10:17:31",
+      "_id": "41e5f420-cca7-4c5b-9159-8d31c982f704",
+      "stationid": "e1612229-6d6e-49c3-a392-b760c648a5b3"
     }
   ]
 }

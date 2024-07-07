@@ -2,27 +2,6 @@
   "file": "./models/stations.json",
   "stations": [
     {
-      "title": "B",
-      "latitude": 14,
-      "longitude": 16,
-      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
-      "_id": "8c9dc257-a09f-473c-b8a8-d7c589334720"
-    },
-    {
-      "title": "A",
-      "latitude": 15,
-      "longitude": -12.021,
-      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
-      "_id": "e4f9e123-3144-43b2-86d2-abd70814abde"
-    },
-    {
-      "title": "C",
-      "latitude": 15,
-      "longitude": 16,
-      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
-      "_id": "12fa3bed-a05a-4b30-96f7-3551db6b054f"
-    },
-    {
       "title": "Zurich",
       "latitude": 47.359,
       "longitude": 8.635,
@@ -42,6 +21,27 @@
       "longitude": -6.266,
       "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
       "_id": "e1612229-6d6e-49c3-a392-b760c648a5b3"
+    },
+    {
+      "title": "Rome",
+      "latitude": 41.902,
+      "longitude": 12.496,
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "3a73c9e0-1f2a-4860-8963-8c257d4a4f46"
+    },
+    {
+      "title": "Madrid",
+      "latitude": 40.416,
+      "longitude": -3.703,
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "da3e43ad-5a80-433a-bed7-cf64d3fdb6f3"
+    },
+    {
+      "title": "Paris",
+      "latitude": 48.856,
+      "longitude": 2.352,
+      "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
+      "_id": "3ca281a5-5067-4f16-a0b6-136aee837fa3"
     }
   ]
 }

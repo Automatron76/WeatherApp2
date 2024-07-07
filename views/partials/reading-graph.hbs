@@ -1,0 +1,32 @@
+
+<div class="box"id="chart">
+<script>
+    
+const data = {
+    labels: [
+        "15:00pm", "18:00pm", "00:00am", "03:00am",
+        "06:00am", "09:00am", "12:00pm",
+        "15:00pm", "18:00pm", "00:00am", "03:00am",
+        "06:00am", "09:00am", "12:00pm"
+    ],
+    datasets: [
+        {
+            name: "Temp", type: "line",
+            values: [{{chartData.temperatures}}]
+        },
+    ]
+}
+
+const chart = new frappe.Chart("#chart", { 
+    title: "Weather forecast every 3 hours",
+    data: data,
+    type: 'axis-mixed', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
+    height: 350,
+    colors: ['#7cd6fd', '#743ee2']
+})
+
+
+</script>
+GRAPH
+
+</div>

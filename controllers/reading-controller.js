@@ -1,28 +1,30 @@
 import axios from "axios";
 import { stationStore } from "../models/station-store.js";
 
-
-
-
-
-
 export const readingController = {
 async index(request, response) {
 
       const station = await stationStore.getStationById(request.params.id); //this gets the station id
-     // const lat = station.latitude;
-     // const long = station.longitude;
+      const lat = station.latitude;
+      const lon = station.longitude;
       const title = station.title;
 
       const weatherRequestUrl = `http://api.openweathermap.org/data/2.5/weather?q=${title}&appid=55f42099079e1f2b191983b4311a383a`
-      
+      const forecastRequestUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=55f42099079e1f2b191983b4311a383a`
       const apiResponse = await axios.get(weatherRequestUrl);
-      const weatherData = apiResponse.data;
+      const forecastResponse = await axios.get(forecastRequestUrl);
 
-      if (!weatherData.main) {
-        console.error("API response does not contain 'main' data:", weatherData);
+      const weatherData = apiResponse.data;
+      const forecastData = forecastResponse.data;
+      if (!weatherData.main || !forecastData.list ) {
+        console.error("API response does not contain 'main' data:", weatherData, forecastData);
         return response.status(500).send("Error: Unexpected API response format.");
       }
+
+       // Extract temperature values from the forecast data
+       const temperatures = forecastData.list.map(item => parseFloat((item.main.temp - 273.15).toFixed(2))); // Convert Kelvin to Celsius
+           // Log the extracted temperatures for debugging
+      console.log( temperatures);
 
         const viewData = {
           title: "Auto Report",
@@ -38,7 +40,11 @@ async index(request, response) {
             windDegree: weatherData.wind.deg,
             description: weatherData.weather[0].description,
             icon: `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`
-          }
+          },
+          chartData: {
+          temperatures:temperatures
+        }
+          
         };
 
         response.render("autoreport-view", viewData);
