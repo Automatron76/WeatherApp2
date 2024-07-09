@@ -42,6 +42,20 @@
       "longitude": 2.352,
       "userid": "e9435c20-1503-49cb-897b-d4b77c9c2dfa",
       "_id": "3ca281a5-5067-4f16-a0b6-136aee837fa3"
+    },
+    {
+      "title": "Cork",
+      "latitude": 51.898,
+      "longitude": -8.475,
+      "userid": "5901803f-6d3e-4a17-a337-6e5adf58963a",
+      "_id": "3e7e0527-a1a3-4bb3-bfe3-10c604bfde15"
+    },
+    {
+      "title": "Berlin",
+      "latitude": 52.52,
+      "longitude": 13.404,
+      "userid": "5901803f-6d3e-4a17-a337-6e5adf58963a",
+      "_id": "036566b4-6ba0-44bf-a5bc-d51be007df2b"
     }
   ]
 }

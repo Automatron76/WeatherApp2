@@ -1,17 +1,40 @@
 <section id="autoreport-view section">
   <div class="box">
-    <h4>{{weather.stationName}}</h4>
-    <div>
-      <p>Temperature: {{weather.temp}} °C</p>
-      <p>Feels Like: {{weather.feelsLike}} °C</p>
-      <p>Min Temperature: {{weather.tempMin}} °C</p>
-      <p>Max Temperature: {{weather.tempMax}} °C</p>
-      <p>Pressure: {{weather.pressure}} hPa</p>
-      <p>Humidity: {{weather.humidity}}%</p>
-      <p>Wind Speed: {{weather.windSpeed}} m/s</p>
-      <p>Wind Direction: {{weather.windDegree}}°</p>
-      <p>Description: {{weather.description}}</p>
-      <img src="{{weather.icon}}" alt="Weather Icon">
+    <div class="columns">
+    <div class="column is-6">
+      <p class="has-text-danger">Time: {{weather.dateTime}}</p>
+      <h1 class="is-size-1">{{weather.stationName}}</h1>
+     <div class="columns is-vcentered">
+          <div class="column is-narrow">
+            <img src="{{weather.icon}}" alt="Weather Icon">
+          </div>
+          <div class="column">
+            <p class="is-size-2">{{weather.temp}} °C</p>
+          </div>
+        </div>
+      <p class="is-size-5 has-text-weight-bold">Feels Like: {{weather.feelsLike}} °C, {{weather.description}}</p>
+      <div class="columns is-multiline">
+          <div class="column is-one-third">
+            <p>Min Temperature: {{weather.tempMin}} °C</p>
+          </div>
+          <div class="column is-one-third">
+            <p>Max Temperature: {{weather.tempMax}} °C</p>
+          </div>
+          <div class="column is-one-third">
+            <p>Pressure: {{weather.pressure}} hPa</p>
+          </div>
+          <div class="column is-one-third">
+            <p>Humidity: {{weather.humidity}}%</p>
+          </div>
+          <div class="column is-one-third">
+            <p>Wind Speed: {{weather.windSpeed}} m/s</p>
+          </div>
+          <div class="column is-one-third">
+            <p>Wind Direction: {{weather.windDegree}}°</p>
+          </div>
+      
+      </div>
+      
     </div>
   </div>
 </section>
