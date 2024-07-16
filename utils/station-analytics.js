@@ -1,98 +1,96 @@
 export const stationAnalytics = {
 
-  getfirstCode(station) {
-    if (station.reports.length > 0) {
-        
-        const firstReport = station.reports[0]; // Get the first report object associated with the station id you are viewing.
-        
-        return firstReport.code; // Return the weather code from the first report object
+  getfirstCode(reports) {
+    if (reports.length > 0) {
+      const firstReport = reports[0]; // Get the first report object
+      return firstReport.code; // Return the weather code from the first report object
     }
     // Return null if there are no reports
     return null;
-},
-
-  getMinTempReport(station) {
-    let minTempReport = null;
-    if (station && station.reports && station.reports.length > 0) {
-      minTempReport = station.reports[0];
-      for (let i = 1; i < station.reports.length; i++) {
-        if (station.reports[i].temp < minTempReport.temp) {
-          minTempReport = station.reports[i];
-        }
-      }
-    }
-    return minTempReport;
-  },
-  
-  getMaxTempReport(station) {
-    let maxTempReport = null;
-    if (station && station.reports && station.reports.length > 0) {
-      maxTempReport = station.reports[0];
-      for (let i = 1; i < station.reports.length; i++) {
-        if (station.reports[i].temp > maxTempReport.temp) {
-          maxTempReport = station.reports[i];
-        }
-      }
-    }
-    return maxTempReport;
   },
 
-  getWindDirection(station) {
-    if (station && station.reports && station.reports.length > 0) {
-      return station.reports[0].windDirection;
-    }
-    return null;  
-  },
-
-  getminWindSpeedReport(station) {
-    let minWindSpeedReport = null;
-    if (station && station.reports && station.reports.length > 0) {
-        minWindSpeedReport = station.reports[0];
-      for (let i = 1; i < station.reports.length; i++) {
-        if (station.reports[i].windSpeed < minWindSpeedReport.windSpeed) {
-            minWindSpeedReport = station.reports[i];
+  getMinTempReport(reports) {
+    if (reports && reports.length > 0) {
+      let minTemp = reports[0].temp;
+      for (let i = 1; i < reports.length; i++) {
+        if (reports[i].temp < minTemp) {
+          minTemp = reports[i].temp;
         }
       }
+      return minTemp;
     }
-    return minWindSpeedReport;
+    return null;
   },
 
-  getmaxWindSpeedReport(station) {
-    let maxWindSpeedReport = null;
-    if (station && station.reports && station.reports.length > 0) {
-        maxWindSpeedReport = station.reports[0];
-      for (let i = 1; i < station.reports.length; i++) {
-        if (station.reports[i].windSpeed > maxWindSpeedReport.windSpeed) {
-            maxWindSpeedReport = station.reports[i];
+  getMaxTempReport(reports) {
+    if (reports && reports.length > 0) {
+      let maxTemp = reports[0].temp;
+      for (let i = 1; i < reports.length; i++) {
+        if (reports[i].temp > maxTemp) {
+          maxTemp = reports[i].temp;
         }
       }
+      return maxTemp;
     }
-    return maxWindSpeedReport;
+    return null;
   },
 
-  getminPressureReport(station) {
-    let minPressureReport = null;
-    if (station && station.reports && station.reports.length > 0) {
-        minPressureReport = station.reports[0];
-      for (let i = 1; i < station.reports.length; i++) {
-        if (station.reports[i].pressure < minPressureReport.pressure) {
-            minPressureReport = station.reports[i];
-        }
-      }
+  getWindDirection(reports) {
+    if (reports && reports.length > 0) {
+      return reports[0].windDirection;
     }
-    return minPressureReport;
+    return null;
   },
 
-  getmaxPressureReport(station) {
-    let maxPressureReport = null;
-    if (station && station.reports && station.reports.length > 0) {
-        maxPressureReport = station.reports[0];
-      for (let i = 1; i < station.reports.length; i++) {
-        if (station.reports[i].pressure > maxPressureReport.pressure) {
-            maxPressureReport = station.reports[i];
+  getminWindSpeedReport(reports) {
+    if (reports && reports.length > 0) {
+      let minWindSpeed = reports[0].windSpeed;
+      for (let i = 1; i < reports.length; i++) {
+        if (reports[i].windSpeed < minWindSpeed) {
+          minWindSpeed = reports[i].windSpeed;
         }
       }
+      return minWindSpeed;
     }
-    return maxPressureReport;
+    return null;
+  },
+
+  getmaxWindSpeedReport(reports) {
+    if (reports && reports.length > 0) {
+      let maxWindSpeed = reports[0].windSpeed;
+      for (let i = 1; i < reports.length; i++) {
+        if (reports[i].windSpeed > maxWindSpeed) {
+          maxWindSpeed = reports[i].windSpeed;
+        }
+      }
+      return maxWindSpeed;
+    }
+    return null;
+  },
+
+  getminPressureReport(reports) {
+    if (reports && reports.length > 0) {
+      let minPressure = reports[0].pressure;
+      for (let i = 1; i < reports.length; i++) {
+        if (reports[i].pressure < minPressure) {
+          minPressure = reports[i].pressure;
+        }
+      }
+      return minPressure;
+    }
+    return null;
+  },
+
+  getmaxPressureReport(reports) {
+    if (reports && reports.length > 0) {
+      let maxPressure = reports[0].pressure;
+      for (let i = 1; i < reports.length; i++) {
+        if (reports[i].pressure > maxPressure) {
+          maxPressure = reports[i].pressure;
+        }
+      }
+      return maxPressure;
+    }
+    return null;
   },
 };

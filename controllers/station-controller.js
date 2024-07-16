@@ -13,20 +13,21 @@ export const stationController = {
 
     station.reports.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)); // Sort reports by dateTime in descending order
 
-    const firstCode = stationAnalytics.getfirstCode(station);   //this should get the weather code of object at index 0
+    const firstCode = stationAnalytics.getfirstCode(station.reports);   //this should get the weather code of object at index 0
 
-    const minTemp = stationAnalytics.getMinTempReport(station);
-    const maxTemp = stationAnalytics.getMaxTempReport(station);
+    const minTemp = stationAnalytics.getMinTempReport(station.reports);
+    const maxTemp = stationAnalytics.getMaxTempReport(station.reports);
 
-    const windDirection = stationAnalytics.getWindDirection(station);
-    const minWindSpeed = stationAnalytics.getminWindSpeedReport(station);
-    const maxWindSpeed = stationAnalytics.getmaxWindSpeedReport(station);
+    const windDirection = stationAnalytics.getWindDirection(station.reports);
+    const minWindSpeed = stationAnalytics.getminWindSpeedReport(station.reports);
+    const maxWindSpeed = stationAnalytics.getmaxWindSpeedReport(station.reports);
     
-    const minPressure = stationAnalytics.getminPressureReport(station);
-    const maxPressure = stationAnalytics.getmaxPressureReport(station);
+    const minPressure = stationAnalytics.getminPressureReport(station.reports);
+    const maxPressure = stationAnalytics.getmaxPressureReport(station.reports);
 
     const{ description, icon }  = weatherUtils.getWeatherDescription(firstCode);
 
+    console.log(minTemp,maxTemp,minPressure,maxPressure,minWindSpeed,maxWindSpeed)  //to check if I am getting values or not 
 
     const viewData = {
       title: "Station",

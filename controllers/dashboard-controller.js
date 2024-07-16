@@ -19,30 +19,35 @@ export const dashboardController = {
     const stations = await stationStore.getStationsByUserId(loggedInUser._id)
     stations.sort((a, b) => a.title.localeCompare(b.title));  //sort stations in alphabetical order
 
-    const report = await reportStore.getReportById(request.params.id); //this gets the report id
-   
-    const minTemp = stationAnalytics.getMinTempReport(report);
-    const maxTemp = stationAnalytics.getMaxTempReport(report);
+     // Loop through each station to fetch and analyze its reports
+     for (const station of stations) {
+      const reports = await reportStore.getReportsByStationId(station._id);
 
-    const windDirection = stationAnalytics.getWindDirection(report);
-    const minWindSpeed = stationAnalytics.getminWindSpeedReport(report);
-    const maxWindSpeed = stationAnalytics.getmaxWindSpeedReport(report);
-    
-    const minPressure = stationAnalytics.getminPressureReport(report);
-    const maxPressure = stationAnalytics.getmaxPressureReport(report);
+      if (reports.length > 0) {
+        station.minTemp = stationAnalytics.getMinTempReport(reports);
+        station.maxTemp = stationAnalytics.getMaxTempReport(reports);
+        station.windDirection = stationAnalytics.getWindDirection(reports);
+        station.minWindSpeed = stationAnalytics.getminWindSpeedReport(reports);
+        station.maxWindSpeed = stationAnalytics.getmaxWindSpeedReport(reports);
+        station.minPressure = stationAnalytics.getminPressureReport(reports);
+        station.maxPressure = stationAnalytics.getmaxPressureReport(reports);
+      }else {
+        station.minTemp = null;
+        station.maxTemp = null;
+        station.windDirection = null;
+        station.minWindSpeed = null;
+        station.maxWindSpeed = null;
+        station.minPressure = null;
+        station.maxPressure = null;
+      }
+    }
+
+    console.log(minTemps, maxTemps, minPressures, maxPressures, windDirections, minWindSpeeds, maxWindSpeeds);
 
     const viewData = {
       title: "Station Dashboard",
       user: user, // Pass user object to the view
-      stations: stations,
-      minTemp: minTemp,
-      maxTemp: maxTemp,
-      windDirection: windDirection,
-      minWindSpeed: minWindSpeed,
-      maxWindSpeed: maxWindSpeed,
-      minPressure: minPressure,
-      maxPressure: maxPressure
-     
+      stations: stations
     };
     
     console.log("dashboard rendering");
