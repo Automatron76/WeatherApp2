@@ -42,7 +42,7 @@ export const dashboardController = {
       }
     }
 
-    console.log(minTemps, maxTemps, minPressures, maxPressures, windDirections, minWindSpeeds, maxWindSpeeds);
+//    console.log(minTemps, maxTemps, minPressures, maxPressures, windDirections, minWindSpeeds, maxWindSpeeds);
 
     const viewData = {
       title: "Station Dashboard",
